@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA FITNESS | Elite Performance & Wellness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --accent-color: #e50914;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --card-bg: #121212;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 25px 10%; 
+            background: rgba(10, 10, 10, 0.8); 
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav .logo { 
+            font-family: 'Syne', sans-serif;
+            font-size: 26px; 
+            font-weight: 800; 
+            color: var(--text-main); 
+            letter-spacing: -1px;
+        }
+        nav .logo span { color: var(--accent-color); }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav ul li a { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.3s; }
+        nav ul li a:hover { color: var(--text-main); }
+
+        /* Hero Premium Section */
+        .hero { 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            padding-left: 10%;
+            background: linear-gradient(to right, rgba(10,10,10,0.9) 30%, rgba(10,10,10,0.2)), 
+                        url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2000') no-repeat center center/cover;
+        }
+        .hero h1 { 
+            font-family: 'Syne', sans-serif;
+            font-size: 65px; 
+            line-height: 1.1;
+            margin-bottom: 20px; 
+            text-transform: uppercase; 
+            max-width: 600px;
+        }
+        .hero h1 span { color: var(--accent-color); }
+        .hero p { font-size: 18px; margin-bottom: 35px; color: var(--text-muted); max-width: 500px; line-height: 1.6; }
+        
+        /* Modern Premium Button */
+        .btn { 
+            background: var(--accent-color); 
+            color: white; 
+            padding: 16px 35px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 15px;
+            border-radius: 50px; 
+            transition: 0.4s; 
+            border: none; 
+            cursor: pointer; 
+            width: fit-content;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn:hover { 
+            background: #b30710; 
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(229, 9, 20, 0.4);
+        }
+
+        /* Grid Services Section */
+        .services { padding: 100px 10%; background-color: #050505; }
+        .services h2 { font-family: 'Syne', sans-serif; font-size: 42px; margin-bottom: 50px; text-align: center; }
+        .grid { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+        
+        .card { 
+            background: var(--card-bg); 
+            padding: 40px; 
+            border-radius: 16px; 
+            flex: 1; 
+            min-width: 300px; 
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #1a1a1a;
+        }
+        .card:hover { 
+            transform: translateY(-12px); 
+            border-color: var(--accent-color);
+        }
+        .card h3 { font-family: 'Syne', sans-serif; font-size: 22px; margin-bottom: 15px; color: var(--text-main); }
+        .card p { color: var(--text-muted); line-height: 1.6; font-size: 15px; }
+
+        /* Premium Footer */
+        footer { text-align: center; padding: 40px; background: #0a0a0a; color: #444; border-top: 1px solid #1a1a1a; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">AURA<span>.</span></div>
+        <ul>
+            <li><a href="#">Membership</a></li>
+            <li><a href="#">Our Programs</a></li>
+            <li><a href="#">The Club</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>CRUSH YOUR<br>LIMITS<span>.</span></h1>
+        <p>An elite training experience crafted for individuals seeking exceptional physical evolution and high-performance lifestyle conditioning.</p>
+        <button class="btn" onclick="initiateBooking()">Book An Elite Session</button>
+    </div>
+
+    <div class="services">
+        <h2>THE REVOLUTIONARY CODE</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>01 / ATHLETIC CONDITIONING</h3>
+                <p>High-intensity biometric training engineered to push tactical endurance, metabolic thresholds, and explosive physical power.</p>
+            </div>
+            <div class="card">
+                <h3>02 / HYPERTROPHY LAB</h3>
+                <p>Advanced biomechanics utilizing world-class selectorized machines and free weights optimized for elite aesthetic muscle architecture.</p>
+            </div>
+            <div class="card">
+                <h3>03 / ELITE COACHING</h3>
+                <p>One-on-one architectural guidance encompassing bespoke dynamic physiological macro-tracking and targeted recovery protocols.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 AURA ELITE PERFORMANCE. CONCEPT DESIGN BY AKHIL MEDIA LAB. GLOBAL DISTRIBUTION READY.
+    </footer>
+
+    <script>
+        function initiateBooking() {
+            alert('Redirecting to Premium Concierge Service Account Verification...');
+        }
+    </script>
+</body>
+</html>
